@@ -18,6 +18,6 @@ This study aims to:
 - **Quantify the divergence between individual-optimal routes (User Equilibrium) and socially optimal routes that minimize total externalities**
 - **Design mechanism-based strategies**  
   -including information provision, incentives, and nudges  
-  -that encourage drivers to select socially desirable routes<br>
+  -that encourage drivers to select socially desirable routes<br><br>
 
   Through these analyses, the study seeks to eplore how individual route choices can be guided toward system-optimal outcomes.
