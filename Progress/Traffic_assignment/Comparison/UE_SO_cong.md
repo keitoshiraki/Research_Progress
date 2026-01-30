@@ -20,7 +20,7 @@ $$
   ネットワーク全体の総旅行時間  
 
 $$
-\sum_a x_a \, t_a(x_a)
+\sum_a x_a \cdot t_a(x_a)
 $$
 
 - **Total Marginal Cost (TMC)**  
