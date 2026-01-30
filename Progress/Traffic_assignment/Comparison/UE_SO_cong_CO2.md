@@ -6,7 +6,7 @@
 および **混雑外部性と CO₂ コストを同時に考慮したシステム最適（SO (congestion＋CO₂)）配分**  
 の結果を比較する。
 
----
+
 
 ## 指標の定義
 
@@ -67,7 +67,7 @@ $$
 \frac{\sum_a x_a \; p_{\mathrm{CO2}} \; EF(v_a) \; L_a / 1000}{\sum_a x_a}
 $$
 
----
+
 
 ## 配分結果の比較
 
@@ -82,14 +82,11 @@ $$
 | Total CO₂ Cost (yen) | $\sum_a x_a \; p_{\mathrm{CO2}} \; EF(v_a)\; L_a/1000$ | 9.20×10^6 | 9.16×10^6 | 9.14×10^6 |
 | CO₂ Cost per TotalFlow (yen) | $\mathrm{CO2}/\sum_a x_a$ | 10.45 | 10.01 | 10.01 |
 
----
+
 
 ## 考察
 
-SO（congestion）配分では、混雑外部性を内部化した社会的限界費用に基づいて
-経路選択が行われるため、UE 配分と比較してネットワーク全体の効率性が向上している。
-
-さらに SO（congestion＋CO₂）配分では、混雑外部性に加えて
+SO（congestion＋CO₂）配分では、混雑外部性に加えて
 走行速度に依存する CO₂ 排出コストも考慮されるため、
 交通流はより環境負荷の小さい状態へと誘導される。
 
@@ -113,3 +110,15 @@ SO 配分では交通が分散されるため、UE 配分より TotalFlow が
 
 以上より、混雑外部性および CO₂ 外部性を考慮した SO 配分は、
 UE 配分と比較してネットワーク全体の効率性と環境性能を同時に向上させることが確認された。
+
+---
+
+## SO(congestion+CO2)配分のコストの総量内訳
+
+| Cost component               | Unit    | Value        |
+|:-----------------------------|:--------|-------------:|
+| Total Travel Time (TTT)      | veh·min | 4,370,000    |
+| Congestion Externality (EXT) | veh·min | 8,850,000   |
+| CO₂ Cost (converted)         | veh·min | 209,000    |
+| Total Social Cost (TSC)      | veh·min | 13,400,000    |
+
