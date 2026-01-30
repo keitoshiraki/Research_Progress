@@ -21,7 +21,7 @@ $$
   ネットワーク全体の総旅行時間  
 
 $$
-\sum_a x_a \, t_a(x_a)
+\sum_a x_a \cdot t_a(x_a)
 $$
 
 - **Total Marginal Cost (TMC)**  
@@ -57,14 +57,14 @@ $$
   ネットワーク全体の CO₂ 排出コスト  
 
 $$
-\sum_a x_a \; p_{\mathrm{CO2}} \; EF(v_a) \; \frac{L_a}{1000}
+\sum_a x_a \cdot p_{\mathrm{CO2}} \cdot EF(v_a) \cdot \frac{L_a}{1000}
 $$
 
 - **CO₂ Cost per TotalFlow**  
   交通量 1 単位あたりの CO₂ コスト  
 
 $$
-\frac{\sum_a x_a \; p_{\mathrm{CO2}} \; EF(v_a) \; L_a / 1000}{\sum_a x_a}
+\frac{\sum_a x_a \cdot p_{\mathrm{CO2}} \cdot EF(v_a) \cdot L_a / 1000}{\sum_a x_a}
 $$
 
 
