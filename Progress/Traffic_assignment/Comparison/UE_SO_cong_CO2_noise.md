@@ -78,7 +78,6 @@ $$
 
 ## 配分結果の比較表（Sioux Falls）
 
-## 配分結果の比較表（Sioux Falls）
 
 | Indicator | UE | SO (congestion) | SO (cong + CO₂) | SO (cong + CO₂ + Noise) |
 |---|---:|---:|---:|---:|
