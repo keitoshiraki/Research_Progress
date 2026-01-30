@@ -1,115 +1,122 @@
-# UE・SO（congestion）・SO（congestion＋CO₂＋noise）配分の比較結果
+# UE・SO（congestion）・SO（congestion＋CO₂）・SO（congestion＋CO₂＋Noise）配分結果の比較  
+*(Sioux Falls Network)*
 
-本節では、Sioux Falls ネットワークを対象として実施した  
-**ユーザー均衡（User Equilibrium, UE）配分**、  
-**混雑外部性を考慮したシステム最適（System Optimum, SO (congestion)）配分**、  
-**混雑外部性と CO₂ 外部性を考慮した SO（congestion＋CO₂）配分**、  
-および **混雑外部性・CO₂ 外部性・騒音外部性を同時に考慮した  
-SO（congestion＋CO₂＋noise）配分**  
-の結果を比較する。
+## 1. 背景と目的
 
----
+本節では，Sioux Falls ネットワークを対象として実施した以下の交通配分結果を比較する。
 
-## 指標の定義
+- **ユーザー均衡（User Equilibrium, UE）配分**
+- **混雑外部性を考慮したシステム最適（SO (congestion)）配分**
+- **混雑外部性・CO₂外部性・騒音外部性を同時に考慮した  
+  システム最適（SO (congestion＋CO₂＋Noise)）配分**
 
-- **Total Flow**  
-  ネットワーク全体におけるリンク交通量の総和  
 
-$$
-\sum_a x_a
-$$
 
-- **Total Travel Time (TTT)**  
-  ネットワーク全体の総旅行時間  
 
-$$
-\sum_a x_a \, t_a(x_a)
-$$
+## 3. 評価指標の定義
 
-- **Total Marginal Cost (TMC)**  
-  社会的限界費用の総和  
+本比較では，以下のネットワーク集計指標を用いる。
+
+### 3.1 Total Flow
+
+ネットワーク全体のリンク交通量の総和：
 
 $$
-\sum_a x_a \left( t_a(x_a) + x_a \frac{dt_a}{dx_a} \right)
+\text{Total Flow} = \sum_a x_a
 $$
 
-- **Congestion Externality (EXT)**  
-  混雑外部性（限界費用と私的費用の差）
+
+
+### 3.2 Total Travel Time (TTT)
+
+リンク交通量と旅行時間の積の総和：
 
 $$
-\sum_a x_a^2 \frac{dt_a}{dx_a}
-= \mathrm{TMC} - \mathrm{TTT}
+\text{TTT} = \sum_a x_a \cdot t_a(x_a)
 $$
 
-- **Average Travel Time**  
+
+
+### 3.3 Congestion Externality
+
+混雑外部性による追加的社会的費用：
 
 $$
-\frac{\mathrm{TTT}}{\sum_a x_a}
+\text{EXT}_{cong}
+= \sum_a x_a^2 \frac{dt_a(x_a)}{dx_a}
 $$
 
-- **EXT per TotalFlow**
+
+
+### 3.4 CO₂ Cost
+
+リンク別 CO₂ 排出量を炭素価格で貨幣換算し，
+旅行時間単位に変換したコストの総和。
+
+
+
+### 3.5 Noise Cost
+
+リンク交通に伴う騒音影響を，
+リンク周辺建物数および距離減衰を考慮して算出した騒音コストの総和。
+
+
+
+### 3.6 Total Social Cost (TSC)
+
+全ての費用要素を合算した社会的総費用：
 
 $$
-\frac{\mathrm{EXT}}{\sum_a x_a}
+\text{TSC}=\text{TTT}+ \text{EXT}_{cong}+ \text{CO}_2 \text{ Cost}+ \text{Noise Cost}
 $$
 
-- **Total CO₂ Cost**
 
-$$
-\sum_a x_a \dot p_{\mathrm{CO2}} \dot EF(v_a) \dot \frac{L_a}{1000}
-$$
 
-- **Total Noise Cost**
+## 4. 配分結果の比較
 
-リンク $a$ 周辺の騒音被害指標 $S_a$ を用いて定義する。
+以下に，各配分ケースにおける評価指標の比較結果を示す。
 
-$$
-\sum_a x_a \dot C_{\mathrm{noise}} \dot S_a
-$$
+## 配分結果の比較表（Sioux Falls）
 
-- **Total Social Cost (TSC)**  
+## 配分結果の比較表（Sioux Falls）
 
-$$
-\mathrm{TSC}
-= \mathrm{TTT}+ \mathrm{EXT}+ \mathrm{CO_2\ Cost}+ \mathrm{Noise\ Cost}
-$$
-
----
-
-## 配分結果の比較
-
-| 指標 | UE | SO (cong) | SO (cong+CO₂) | SO (cong+CO₂+noise) |
-|:--|--:|--:|--:|--:|
-| Total Flow | 8.80×10^5 | 9.14×10^5 | 9.14×10^5 | 9.15×10^5 |
-| Total Travel Time (TTT) | 4.50×10^6 | 4.37×10^6 | 4.37×10^6 | 4.36×10^6 |
-| Congestion Externality (EXT) | 9.78×10^6 | 8.87×10^6 | 8.85×10^6 | 8.84×10^6 |
-| Total CO₂ Cost (yen) | 9.20×10^6 | 9.16×10^6 | 9.14×10^6 | 9.13×10^6 |
-| Total Noise Cost (min) | – | – | – | （非常に小） |
-| Total Social Cost (TSC) | 最大 | ↓ | ↓ | 最小 |
-
-※ 数値は代表値。Noise cost は他の費用項目と比較して相対的に小さい。
+| Indicator | UE | SO (congestion) | SO (cong + CO₂) | SO (cong + CO₂ + Noise) |
+|---|---:|---:|---:|---:|
+| **Total Flow** | 879824.0 | 914208.3 | 913680.7 | 914062.8 |
+| **Total Travel Time (TTT)** [veh·min] | 4501546.0 | 4370625.0 | 4365611.0 | 4364273.0 |
+| **Total Marginal Cost (TMC)** [veh·min] | 14281250.0 | 13236920.0 | 13220410.0 | 13220630.0 |
+| **Congestion Externality (EXT)** [veh·min] | 9779705.0 | 8866298.0 | 8854795.0 | 8856354.0 |
+| **Average Travel Time** [min/veh] | 5.116416 | 4.780777 | 4.778049 | 4.774588 |
+| **EXT per Total Flow** [min/veh] | 11.11552 | 9.698335 | 9.691345 | 9.689000 |
+| **Total CO₂ Cost** [veh·min] | 210233.6 | 209319.2 | 209030.2 | 208894.3 |
+| **CO₂ Cost per Total Flow** [min/veh] | 0.2389496 | 0.2289623 | 0.2287782 | 0.2285339 |
+| **Total Noise Cost** [veh·min] | 244624.7 | 246765.3 | 246344.2 | 245235.3 |
+| **Noise Cost per Total Flow** [min/veh] | 0.2780383 | 0.2699225 | 0.2696174 | 0.2682915 |
+| **Total Social Cost (TSC)** [veh·min] | 14736110.0 | 13693010.0 | 13675780.0 | 13674760.0 |
 
 
 
-## 考察
-
-SO（congestion＋CO₂＋noise）配分では、混雑外部性および CO₂ 外部性に加えて、  
-沿道環境への影響を表す騒音外部性も考慮して交通配分を行っている。
-
-その結果、
-
-- **総旅行時間（TTT）**および **混雑外部性（EXT）** は  
-  UE 配分と比較して大きく低下
-- **CO₂ 排出コスト**は SO（congestion＋CO₂）および  
-  SO（congestion＋CO₂＋noise）配分において最小
-- **騒音コスト**は全体の社会的費用に占める割合は小さいものの、  
-  騒音影響の大きいリンクを相対的に回避する方向に交通流を誘導する効果が確認された
-
-騒音外部性の影響が比較的小さい理由としては、  
-Sioux Falls ネットワークが抽象的なベンチマークネットワークであり、  
-住宅密度や人口分布を簡略化した仮想設定としている点が挙げられる。
 
 
-以上より、混雑外部性・CO₂ 外部性・騒音外部性を考慮した  
-SO 配分は、ネットワーク全体の効率性と環境性能を  
-同時に改善する可能性を有することが確認された。
+
+
+## 5. 考察
+
+
+### 5.2 CO₂・騒音外部性の追加効果
+
+SO（congestion＋CO₂＋Noise）配分では，
+
+周辺建物への影響が大きいリンク
+
+の一般化費用が相対的に増加するため，
+交通流は **騒音コストの小さいリンクへ再配分** される。
+
+その結果，
+
+ Noise Cost の低減
+
+
+が生じることが確認できる。
+
+
