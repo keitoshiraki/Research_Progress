@@ -1,0 +1,141 @@
+# Sioux Falls ネットワークにおける UE・SO 配分結果の比較  
+（混雑・CO₂・騒音・事故外部性）
+
+## 1. 概要
+
+本節では，Sioux Falls ネットワークを対象として，
+
+- **ユーザー均衡（User Equilibrium, UE）**
+- **社会的最適（System Optimum, SO）**
+
+の配分結果を比較する。  
+SO 配分では外部性を段階的に追加し，以下の 5 ケースを分析した。
+
+### 分析ケース
+- **UE**
+- **SO（混雑外部性のみ）**
+- **SO（混雑 + CO₂）**
+- **SO（混雑 + CO₂ + 騒音）**
+- **SO（混雑 + CO₂ + 騒音 + 事故）**
+
+## 2. 指標の定義
+
+リンク $a$ について，以下を定義する。
+
+- $x_a$：リンク交通量 [veh]  
+- $t_a(x_a)$：リンク旅行時間 [min/veh]  
+- $mc_a(x_a)$：リンクの社会限界旅行時間 [min/veh]  
+
+
+### (1) Total Flow
+
+$$
+\text{Total Flow} = \sum_a x_a
+$$
+
+
+
+### (2) Total Travel Time (TTT)
+
+$$
+\text{TTT} = \sum_a x_a \, t_a(x_a)
+\quad [\mathrm{veh\cdot min}]
+$$
+
+
+
+### (3) Total Marginal Cost
+
+$$
+\text{Total Marginal Cost} = \sum_a x_a \, mc_a(x_a)
+\quad [\mathrm{veh\cdot min}]
+$$
+
+
+
+### (4) 混雑外部性（Congestion Externality, EXT）
+
+$$
+\text{EXT} = \sum_a x_a \left( mc_a(x_a) - t_a(x_a) \right)
+\quad [\mathrm{veh\cdot min}]
+$$
+
+
+
+### (5) CO₂ コスト
+
+$$
+\text{CO₂ Cost} = \sum_a x_a \, c^{CO_2}_a
+\quad [\mathrm{veh\cdot min}]
+$$
+
+
+
+### (6) 騒音コスト
+
+$$
+\text{Noise Cost} = \sum_a x_a \, c^{noise}_a
+\quad [\mathrm{veh\cdot min}]
+$$
+
+
+
+### (7) 事故コスト
+
+$$
+\text{Accident Cost} = \sum_a x_a \, c^{acc}_a
+\quad [\mathrm{veh\cdot min}]
+$$
+
+
+
+### (8) 総社会費用（Total Social Cost, TSC）
+
+$$
+\text{TSC}=
+\text{TTT}
++ \text{EXT}
++ \text{CO₂}
++ \text{Noise}
++ \text{Accident}
+\quad [\mathrm{veh\cdot min}]
+$$
+
+
+
+## 3. 配分結果
+
+|                                        | UE           | SO(congestion)   | SO(cong+CO₂)   | SO(cong+CO₂+noise)   | SO(cong+CO₂+noise+accident) |
+|:---------------------------------------|:-------------|:-----------------|:---------------|:---------------------|:----------------------------|
+| Total Flow                             | 8.79824×10^5 | 9.14208×10^5     | 9.13681×10^5   | 9.14063×10^5         | 9.14255×10^5                |
+| Total Travel Time (TTT) [veh·min]      | 4.50155×10^6 | 4.37063×10^6     | 4.36561×10^6   | 4.36427×10^6         | 4.36831×10^6                |
+| Total Marginal Cost [veh·min]          | 1.42813×10^7 | 1.32369×10^7     | 1.32204×10^7   | 1.32206×10^7         | 1.32390×10^7                |
+| Congestion Externality (EXT) [veh·min] | 9.77970×10^6 | 8.86630×10^6     | 8.85479×10^6   | 8.85635×10^6         | 8.87069×10^6                |
+| Total CO₂ Cost [veh·min]               | 3.90753×10^5 | 3.92379×10^5     | 3.91289×10^5   | 3.90154×10^5         | 3.90376×10^5                |
+| Total Noise Cost [veh·min]             | 2.44625×10^5 | 2.46765×10^5     | 2.46344×10^5   | 2.45235×10^5         | 2.45288×10^5                |
+| Total Accident Cost [veh·min]          | 5.20604×10^3 | 5.20789×10^3     | 5.20387×10^3   | 5.19569×10^3         | 5.19687×10^3                |
+| Total Social Cost (TSC) [veh·min]      | 1.49218×10^7 | 1.38813×10^7     | 1.38632×10^7   | 1.38612×10^7         | 1.38799×10^7                |
+
+
+
+## 4. 考察
+
+
+
+### 4.3 事故コストの規模について
+
+事故コストは，他の外部性と比べて **桁違いに小さい**。  
+これは事故が低頻度事象であることを反映した **理論的に妥当な結果**である。
+
+そのため，本研究では事故コストの基本ケースを維持し，  
+**感度分析（例：×10，×50）によって影響の大きさを検証する**。
+
+---
+
+### 4.4 総社会費用の観点からの比較
+
+- **SO（混雑 + CO₂ + 騒音）** が最小の総社会費用を示した  
+- 事故コストを追加しても，最適配分は大きく変化しない  
+
+これは，**混雑外部性が支配的であり，環境・安全外部性は配分を微調整する役割を果たす**ことを示唆している。
+
