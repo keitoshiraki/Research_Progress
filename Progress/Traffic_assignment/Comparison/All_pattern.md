@@ -8,7 +8,7 @@
 | Total Accident Cost [veh·min] | 5,198 | 5,183 | 5,181 | 5,173 | 5,172 | 5,181 | 5,174 | 5,174 | 5,183 | 5,200 | 5,159 | 5,158 | 5,199 | 5,153 | **5,152** | 5,197 |
 | Total Social Cost (TSC) [veh·min] | 14,698,300 | 13,492,958 | 13,495,397 | 13,501,892 | 13,502,023 | 13,491,416 | 13,497,192 | 13,497,479 | **13,488,811** | 14,760,519 | 14,868,634 | 14,867,133 | 14,760,121 | 14,786,988 | 14,785,412 | 14,695,403 |
 
-### TSCが小さい上位5シナリオ
+### TSCランキング（小さい順）
 
 | Rank | Scenario | TSC [veh·min] |
 |---:|---|---:|
@@ -17,6 +17,18 @@
 | 3 | SO(cong) | 13,492,958 |
 | 4 | SO(cong+CO₂) | 13,495,397 |
 | 5 | SO(cong+noise) | 13,497,192 |
+| 6 | SO(cong+noise+acc) | 13,497,479 |
+| 7 | SO(cong+CO₂+noise) | 13,501,892 |
+| 8 | SO(cong+CO₂+noise+acc) | 13,502,023 |
+| 9 | SO(acc) | 14,695,403 |
+| 10 | UE | 14,698,300 |
+| 11 | SO(CO₂+acc) | 14,760,121 |
+| 12 | SO(CO₂) | 14,760,519 |
+| 13 | SO(noise+acc) | 14,785,412 |
+| 14 | SO(noise) | 14,786,988 |
+| 15 | SO(CO₂+noise+acc) | 14,867,133 |
+| 16 | SO(CO₂+noise) | 14,868,634 |
+
 
 | 指標（UE=1正規化） | UE | SO(cong) | SO(cong+CO₂) | SO(cong+CO₂+noise) | SO(cong+CO₂+noise+acc) | SO(cong+CO₂+acc) | SO(cong+noise) | SO(cong+noise+acc) | SO(cong+acc) | SO(CO₂) | SO(CO₂+noise) | SO(CO₂+noise+acc) | SO(CO₂+acc) | SO(noise) | SO(noise+acc) | SO(acc) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
