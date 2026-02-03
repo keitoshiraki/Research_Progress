@@ -48,6 +48,9 @@
 | 15 | SO(CO₂+acc) | 1.00177 |
 | 16 | SO(CO₂) | 1.00184 |
 
+![1E7DB26D-B77E-47BE-8D56-98C77470470F_4_5005_c](https://github.com/user-attachments/assets/ec7b0802-1a48-40fb-b772-ee5a291be365)
+
+<img width="523" height="395" alt="F6BC23A5-BDE6-4876-A747-5B2A13F99652" src="https://github.com/user-attachments/assets/688f0e69-2a66-4837-bff5-2ba61eabb3e8" />
 
 
 ---
