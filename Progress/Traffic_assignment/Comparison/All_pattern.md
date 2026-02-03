@@ -48,6 +48,8 @@
 | 15 | SO(CO₂+acc) | 1.00177 |
 | 16 | SO(CO₂) | 1.00184 |
 
+---
+
 ## accコストを50倍
 | 指標 | UE | SO(cong) | SO(cong+CO₂) | SO(cong+CO₂+noise) | SO(cong+CO₂+noise+acc) | SO(cong+CO₂+acc) | SO(cong+noise) | SO(cong+noise+acc) | SO(cong+acc) | SO(CO₂) | SO(CO₂+noise) | SO(CO₂+noise+acc) | SO(CO₂+acc) | SO(noise) | SO(noise+acc) | SO(acc) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
