@@ -106,7 +106,7 @@ This is consistent with previous studies.
 
 → The model fits well overall, with some larger deviations at certain speeds.
 
----
+
 
 ## 7. Application to Traffic Assignment
 
@@ -119,7 +119,7 @@ Based on this, the following were constructed:
 
 This allows traffic assignment incorporating CO₂ emissions.
 
----
+
 
 ## 8. Conclusion
 
@@ -131,6 +131,9 @@ The emission factor function was successfully estimated using CAN data.
 - Realistic U-shaped relationship  
 
 The model is suitable for use in CO₂-aware traffic assignment.
+
+<img width="3000" height="1800" alt="2DF3AE6A-176E-4705-99E7-B3168A76DFE1" src="https://github.com/user-attachments/assets/c6b19fd7-9d8a-4d0b-8ee1-7802b9323b2b" />
+
 
 ---
 
@@ -251,7 +254,7 @@ $R^2 = 0.90$ より、モデルは速度と排出係数の関係を良好に説�
 
 これにより、CO₂排出を考慮した交通配分分析が可能となった。
 
----
+
 
 ## 8. まとめ
 
